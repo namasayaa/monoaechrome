@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+   <title>Cart - MON[AE]CHROME</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <link rel="stylesheet" href="/css/stylepro.css">
+
+</head>
+
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="/"><h1><B>MON[AE]CHROME</B></h1></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="/"><b>HOME</b></a></li>
+                        <li><a href="/product"><b>PRODUCT</b></a></li>
+                        <li><a href="contact"><b>CONTACT</b></a></li>
+						<li><a href="cart"><img src="images/cart.png" width="30px" height="30px"></a></li>
+						<li><img src="images/menu.png" class="menu-icon" onclick="menutoggle()"></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 order-md-1" data-aos="fade-up" data-aos-delay="300">
+          <br><h3 class="mb-3 text-center">Order Details</h3>
+          <form class="needs-validation" action="/cart" method="POST"  novalidate data-aos="fade-up" data-aos-delay="300">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Front Name</label>
+                <input type="text" class="form-control" id="firstName" name="front_name" placeholder="" required>
+                <div class="invalid-feedback">
+                  Valid front name is required.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Family Name</label>
+                <input type="text" class="form-control" id="lastName" name="family_name" placeholder="" required>
+                <div class="invalid-feedback">
+                  Valid family name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="">
+              <div class="invalid-feedback">
+                Fill the email correctly.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="address" name="address" placeholder="" required>
+              <div class="invalid-feedback">
+                Fill the detail of address.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="address2">Address 2<span class="text-muted"> (Opsional)</span></label>
+              <input type="text" class="form-control" id="address2" name="address2" placeholder="">
+            </div>
+
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">Country</label>
+                <input type="text" class="form-control" id="country" name="country" placeholder="" required>
+                <div class="invalid-feedback">
+                 Your country is not registered.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+               <label for="state">City</label>
+                <input type="text" class="form-control" id="state" name="city" placeholder="" required>
+                <div class="invalid-feedback">
+                 Your city is not registered
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Zip Code</label>
+                <input type="text" class="form-control" id="zip" name="zip_code" placeholder="" required>
+                <div class="invalid-feedback">
+                  Zip code is not registered.
+                </div>
+              </div>
+            </div>
+
+            <hr class="mb-4">
+			<h3 class="mb-3 text-center" data-aos="fade-up" data-aos-delay="300">Choose Items </h3>
+			<div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="Jenis">Item</label>
+                <select class="custom-select d-block w-100" name="item" id="Jenis ikan" required>
+                  <option value="">Choose...</option>
+                  <option value="Slim Blazer Suit">Slim Blazer Suit</option>
+				  <option value="Basic Crewneck">Basic Crewneck</option>
+				  <option value="Clear Hoodie">Clear Hoodie</option>
+				  <option value="Basic-Stylish Trucker">Basic-Stylish Trucker</option>
+				  <option value="Basic Sweatpants">Basic Sweatpants</option>
+				  <option value="Basic Long-Sleeve Tee">Basic Long-Sleeve Tee</option>
+				  <option value="Slim Fit Formal Shirt">Slim Fit Formal Shirt</option>
+				  <option value="Basic Short Twill">Basic Short Twill</option>
+				  <option value="Basic Men Tank Top">Basic Men Tank Top</option>
+				  <option value="Basic Sport Top">Basic Sport Top</option>
+				  <option value="Basic Rounded Hat">Basic Rounded Hat</option>
+				  <option value="7 Pcs Basic Sock">7 Pcs Basic Sock</option>
+				  <option value="Shoes Adidas X AE">Shoes Adidas X AE</option>
+                </select>
+			  </div>
+			  <div class="col-md-6 mb-3">
+                <label for="Jumlah">Color</label>
+				<select class="custom-select d-block w-100" name="color" id="Jenis ikan" required>
+                  <option value="">Choose...</option>
+                  <option value="Black">Black</option>
+				  <option value="White">White</option>
+				</select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="Jumlah">Size</label>
+				<select class="custom-select d-block w-100" name="size" id="Jenis ikan" required>
+                  <option value="">Choose...</option>
+                  <option value="XS">XS</option>
+				  <option value="S">S</option>
+				  <option value="M">M</option>
+				  <option value="L">L</option>
+				  <option value="XL">XL</option>
+				  <option value="XXL">XXL</option>
+				</select>
+              </div>
+			  <div class="col-md-6 mb-3">
+                <label for="Jumlah">Total Item</label>
+				<input type="number" min="1" max="99" class="form-control" name="total_item" id="Jumlahikan" placeholder="" value="" required>
+              </div>
+            </div>
+			<hr class="mb-4">
+            <h3 class="mb-3 text-center" data-aos="fade-up" data-aos-delay="100">Payment</h3>
+			<h4 class="mb-3"data-aos="fade-up" data-aos-delay="100" >Choose Payment Method</h4>
+            <div class="d-block my-3"data-aos="fade-up" data-aos-delay="100" >
+              <div class="custom-control custom-radio">
+                <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                <label class="custom-control-label" for="credit">Credit Card</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                <label class="custom-control-label" for="debit">Debit Card</label>
+              </div>
+            </div>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-6 mb-3">
+                <label for="cc-name">Card Name</label>
+                <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                <small class="text-muted">Ful name on the card</small>
+                <div class="invalid-feedback">
+                  Name on the card is needed
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="cc-number">Card Number</label>
+                <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                <div class="invalid-feedback">
+                  Card number is needed
+                </div>
+              </div>
+            </div>
+            <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">Expired Date</label>
+                <input type="text" class="form-control" id="cc-expiration" placeholder="mm/yy" required>
+                <div class="invalid-feedback">
+                  Expiration date required
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="cc-expiration">CVV</label>
+                <input type="text" class="form-control" id="cc-cvv" placeholder="123" required>
+                <div class="invalid-feedback">
+                  Security code required
+                </div>
+              </div>
+            </div>
+            <hr class="mb-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="col-md-12 mb-3 text-center">
+					<button class="btn" type="submit">ORDER NOW</button>
+				</div><br>
+          </form>
+        </div>
+      </div>
+	</div>
+  <!-- ======= Footer ======= -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Dowload App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/play-store.png">
+                        <img src="images/app-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <a href="/"><h1>MON[AE]CROME</h1></a>
+                    <p>Our Purpose Is Sustainably Make the Pleasure and
+                    Benefit of Sports Accessible to the Many.</p>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <a href=""><li>Twitter</li></a>
+                        <a href=""><li>Instagram</li></a>
+                        <a href=""><li>Youtube</li></a>
+                        <a href=""><li>Facebook</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyrigt 2021 - MON[AE]CHORME</p>
+        </div>
+    </div>
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
